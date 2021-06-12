@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/tile-style.css"  />
+      	<link type="text/css" rel="stylesheet" href="css/border.css"  />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script type="text/javascript">
+			function goToPage(page){
+				document.getElementById("pageView").src=page;
+			}
+		</script>
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<ul id="sideNavigation" class="side-nav">
+			<li> <div class="userView">
+				<img class="background" src="images/userBackground.jpg">
+				<a href="#"> <img class="circle" src="images/person.png"> </a>
+				<a href="#!name"><span class="white-text name">ABC Retailer</span></a>
+				<a href="#!email"><span class="white-text email">Retail Manager</span></a>
+			</div> </li>	
+			<li><a class="subheader" style="font-size:10px">What all You can Do</a></li>
+			<li><a onclick="goToPage('./CreateOrder.jsp')" style="cursor: pointer;">Place New Order</a></li>
+			<li><a onclick="goToPage('./CustomerDetail.jsp')"  style="cursor: pointer;">Add Customer Details</a></li>
+			<li><a onclick="goToPage('./VeiwCustomerDetail.jsp')"  style="cursor: pointer;">View Customer Details</a></li>
+			<li><a onclick="goToPage('./catalog.jsp')"  style="cursor: pointer;">Veiw Order</a></li>
+			<li><a onclick="goToPage('./OrderCancel.jsp')"  style="cursor: pointer;">Cancel Order</a></li>
+			<li><a onclick="goToPage('./editdefectjsp.jsp')"  style="cursor: pointer;">Report Defect</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader" style="font-size:10px">Things concerning You</a></li>
+			<li><a href="#"><i class="material-icons">settings</i>Change Profile Data</a></li>
+			<li><a href="#"><i class="material-icons">power_settings_new</i>Log Out</a></li>
+		</ul>
+		<nav style="position:fixed;top:0;z-index:1">
+			<div class="nav-wrapper blue-grey darken-1">
+				<a class="btn-floating btn-large waves-effect waves-light green btn-prsn" data-activates="sideNavigation" style="margin-top:3px;margin-right:5px;"><i class="material-icons">perm_identity</i></a>
+				<a onclick="goToPage('./catalog.jsp')" class="brand-logo"  style="cursor: pointer;">Retail Management</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+        			<li><a href="#newModel" id="newModelAnchor"  style="cursor: pointer;">Make an Order</a></li>
+        			<li><a href="#viewModel" id="viewModelAnchor"  style="cursor: pointer;">View Orders</a></li>
+     			</ul>
+			</div>
+		</nav>
+		<script type="text/javascript">
+			$('#viewModelAnchor').click(function(){
+				$('html,body').animate(
+					{scrollTop: $('#viewModel').offset().top},1000,"easeOutQuint");
+				$('#newModelForm').animate(
+					{opacity: 0},1000,"easeOutQuint");
+				$('#viewModelForm').animate(
+					{opacity: 1},2000,"easeOutQuint");
+			});
+			$('#newModelAnchor').click(function(){
+				$('html,body').animate(
+					{scrollTop: $('#newModel').offset().top},1000,"easeOutQuint");
+				$('#newModelForm').animate(
+					{opacity: 1},2000,"easeOutQuint");
+				$('#viewModelForm').animate(
+					{opacity: 0},1000,"easeOutQuint");
+			});
+			
+			$('.btn-prsn').sideNav();
+		</script>
+		<iframe scrolling="auto" src="./catalog.jsp" style="display:block; position:fixed;width:100%;height:100%;top:3.4em;" id="pageView"></iframe>
+
+</body>
+</html>
