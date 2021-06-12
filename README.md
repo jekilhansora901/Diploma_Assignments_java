@@ -1,2 +1,6 @@
-# Diploma_Assignments_java
-Core Java Assignment
+# Assignments
+
+### Technology Used 🧰:
+  * Java
+
+### Programs on core Java topics
