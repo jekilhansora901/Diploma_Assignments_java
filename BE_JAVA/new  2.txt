@@ -1,0 +1,40 @@
+class aray
+{
+	public static void main(String []s)
+	{
+		int a[]=new int[5];
+		int p,n,i,ch;
+		Scanner ss=new Scanner(System.in);
+		do
+		{
+		System.out.println("Enter Pos : ");
+		p=ss.nextInt();
+		System.out.println(Enter Data : ");
+		n=ss.nextInt();
+		for(i=0;i<5;i++)
+			a[i]=-1;
+		try
+		{
+			if(pos>5) throw new InterruptedException();
+			if(a[pos]>0) throw new IOException();
+			if(n<0) throw new NumberFormatException();
+			a[pos]=n;
+			System.out.println("No Insrted..");
+		}
+		catch(InterruptedException i)
+		{
+			System.out.println("Array Index Out of Bound ..");
+		}
+		catch(IOException i)
+		{
+			System.out.println("Position is already occupied ..");
+		}
+		catch(NumberFormatException i)
+		{
+			System.out.println("Negative No is not Allowed ..");
+		}
+		System.out.println("Do you want to continue ?(1/0) : ");
+		ch=ss.nextInt();
+		}while(ch==1);
+	}
+}

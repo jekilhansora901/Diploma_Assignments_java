@@ -1,0 +1,76 @@
+
+            body 
+            {
+                background-image:url(obl-1x1.png);
+            }
+            a:link
+            {
+                color:black;
+		text-decoration:none;
+            }
+            a:visited
+            {
+                color:purple;
+            }
+            a:hover 
+            { 
+                background-color:#303030;
+                background-border:1px solid;
+		border-radius:3px;
+		color:white;
+            }
+            a:active 
+            {
+                background-color:orange;
+            }
+            #first
+            {
+                position:absolute;
+                left:150px;
+                top:50px;
+                height:200px;
+                width:1000px;
+                background-color:orangered;
+                font-family:sans-serif;
+              
+                border:0px solid;
+                border-top-left-radius:  20px;
+		border-top-right-radius: 20px;	
+               
+            }
+            
+            #mid
+            {
+                position:absolute;
+                left:100px;
+                top:120px;
+                background-color: gray;
+                height:40px;
+                width:800px;
+                border:0px solid;
+                border-radius: 15px;
+                
+            }
+            #bar
+            {
+                position:absolute;
+                left:150px;
+                top:250px;
+                height:50px;
+                width:1000px;
+                background-color:gray;
+               
+                
+            }
+            #main
+            {
+                position:absolute;
+                left:150px;
+                top:300px;
+                height:340px;
+                width:1000px;
+                background-color:gray;
+                border:0px solid;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
